@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#7fd6ff">
+  <title>مغامرة الفلزات القلوية والأرضية</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button id="soundBtn" class="sound-btn" aria-label="تشغيل أو إيقاف الصوت">🔊</button>
+
+  <main class="container">
+    <section id="startScreen" class="screen active">
+      <div class="card center">
+        <div class="mascot">🧑‍🔬</div>
+        <h1>مغامرة الفلزات!</h1>
+        <p class="intro">
+          هيا نتعرف على الفلزات القلوية والفلزات الأرضية القلوية ونجمع النجوم.
+        </p>
+
+        <div class="groups">
+          <div class="group group-one">
+            <h2>⚡ الفلزات القلوية — المجموعة 1</h2>
+            <div class="chips">
+              <span>Li</span><span>Na</span><span>K</span>
+              <span>Rb</span><span>Cs</span><span>Fr</span>
+            </div>
+          </div>
+
+          <div class="group group-two">
+            <h2>🦴 الفلزات الأرضية القلوية — المجموعة 2</h2>
+            <div class="chips">
+              <span>Be</span><span>Mg</span><span>Ca</span>
+              <span>Sr</span><span>Ba</span><span>Ra</span>
+            </div>
+          </div>
+        </div>
+
+        <button id="startBtn" class="btn primary">ابدأ اللعب 🚀</button>
+      </div>
+    </section>
+
+    <section id="gameScreen" class="screen">
+      <div class="hud">
+        <div class="pill">⭐ <span id="score">0</span></div>
+        <div class="progress"><div id="progressFill"></div></div>
+        <div id="streak" class="pill">🔥 0</div>
+      </div>
+
+      <div class="card">
+        <div class="question-row">
+          <div id="questionFace" class="mascot small">🤔</div>
+          <h2 id="questionText" class="question"></h2>
+        </div>
+
+        <div id="answers" class="answers"></div>
+
+        <div id="feedback" class="feedback" aria-live="polite">
+          <strong id="feedbackTitle"></strong>
+          <p id="feedbackText"></p>
+        </div>
+
+        <div class="center">
+          <button id="nextBtn" class="btn secondary hidden">السؤال التالي ⬅️</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="endScreen" class="screen">
+      <div class="card center">
+        <div id="endFace" class="mascot">🥳</div>
+        <h1 id="endTitle">أحسنت!</h1>
+        <div id="stars" class="stars">⭐⭐⭐</div>
+        <div class="final-score"><span id="finalScore">0</span> نقطة</div>
+        <p id="endText"></p>
+        <button id="restartBtn" class="btn primary">العب مرة أخرى 🔄</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
